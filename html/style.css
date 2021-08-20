@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: cursive;
+  font-family: Trebuchet MS, sans-serif;
 }
 
 #backgroundsForPhone {
@@ -35,8 +35,6 @@ body {
 #titles {
   margin-top: 0;
   margin: 20px;
-  padding: 5px;
-  border-radius: 10px;
 }
 
 #imageForPhone {
@@ -115,11 +113,17 @@ body {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 @media (max-width: 750px) {
   #backgrounds {
     display: block;
+  }
+  #imageForDesktop {
+    width: 90%;
+    height: 200px;
   }
   #backgroundsForPhone, #backgroundsForDesktop {
     border: 0;
@@ -130,6 +134,9 @@ body {
     width: 100%;
     height: 100%;
     margin-top: -20px;
+  }
+  #titles {
+    padding-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
