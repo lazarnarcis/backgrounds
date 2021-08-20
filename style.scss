@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Trebuchet MS, sans-serif;
+}
+#backgroundsForPhone {
+    width: 50%;
+    background-color: rgba(0,0,0, 0.5);
+
+    border-right: 1.5px solid rgb(24, 119, 170);
+    min-height: 100%;
+}
+#backgroundsForDesktop {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    min-height: 100vh;
+    border-left: 1.5px solid rgb(24, 119, 170);
+}
+#backgrounds{ 
+    display: flex;
+}
+#backgroundsForPhone #titles {
+    color: white;
+}
+#backgroundsForDesktop #titles {
+    color: black;
+}
+#titles {
+    margin-top: 0;
+    margin: 20px;
+}
+#imageForPhone {
+    width: 150px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform .3s;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#imageForPhone {
+    box-shadow: 0px 0px 2.5px grey;
+}
+#imageForDesktop {
+    box-shadow: 0px 0px 2.5px black;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background:#49839c;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0b3040; 
+}
+#imageForDesktop {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform .3s;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#imageForPhone:hover,#imageForDesktop:hover {
+    transform: translate(0, -10%);
+}
+#backgroundsForPhone, #backgroundsForDesktop {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: blur(3px);
+}
+@media (max-width: 750px) {
+    #backgrounds {
+        display: block;
+    }
+    #imageForDesktop {
+        width: 90%;
+        height: 200px;
+    }
+    #backgroundsForPhone, #backgroundsForDesktop {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin-top: -20px;
+    }
+    #titles  {
+        padding-top: 20px;
+    }
+}
